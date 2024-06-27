@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            textBox1 = new TextBox();
+            username_txt = new TextBox();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
-            textBox2 = new TextBox();
+            pwd_txt = new TextBox();
             pictureBox3 = new PictureBox();
             checkBox1 = new CheckBox();
             button1 = new Button();
@@ -61,23 +61,23 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(username_txt);
             panel1.Controls.Add(pictureBox2);
             panel1.Location = new Point(39, 165);
             panel1.Name = "panel1";
             panel1.Size = new Size(343, 53);
             panel1.TabIndex = 1;
             // 
-            // textBox1
+            // username_txt
             // 
-            textBox1.BackColor = Color.Coral;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(54, 9);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(287, 36);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            username_txt.BackColor = Color.Coral;
+            username_txt.BorderStyle = BorderStyle.None;
+            username_txt.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            username_txt.Location = new Point(54, 9);
+            username_txt.Name = "username_txt";
+            username_txt.Size = new Size(287, 36);
+            username_txt.TabIndex = 2;
+            username_txt.TextChanged += textBox1_TextChanged;
             // 
             // pictureBox2
             // 
@@ -91,22 +91,23 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(textBox2);
+            panel2.Controls.Add(pwd_txt);
             panel2.Controls.Add(pictureBox3);
             panel2.Location = new Point(39, 234);
             panel2.Name = "panel2";
             panel2.Size = new Size(343, 53);
             panel2.TabIndex = 2;
             // 
-            // textBox2
+            // pwd_txt
             // 
-            textBox2.BackColor = Color.Coral;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(54, 9);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(287, 36);
-            textBox2.TabIndex = 2;
+            pwd_txt.BackColor = Color.Coral;
+            pwd_txt.BorderStyle = BorderStyle.None;
+            pwd_txt.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            pwd_txt.Location = new Point(54, 9);
+            pwd_txt.Name = "pwd_txt";
+            pwd_txt.Size = new Size(287, 36);
+            pwd_txt.TabIndex = 2;
+            pwd_txt.TextChanged += textBox2_TextChanged;
             // 
             // pictureBox3
             // 
@@ -195,9 +196,9 @@
         private PictureBox pictureBox1;
         private Panel panel1;
         private PictureBox pictureBox2;
-        private TextBox textBox1;
+        private TextBox username_txt;
         private Panel panel2;
-        private TextBox textBox2;
+        private TextBox pwd_txt;
         private PictureBox pictureBox3;
         private CheckBox checkBox1;
         private Button button1;

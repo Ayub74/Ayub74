@@ -53,12 +53,32 @@ namespace Login_2
 
                 cmd.Parameters.AddWithValue("@Name", username_txt);
                 cmd.Parameters.AddWithValue("@Name", pwd_txt.Text);
-                cmd.ExecuterReader();
+
+                var reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    MessageBox.Show("Login Successful!");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password");
+                }
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error : {ex.Message}");
+                Console.WriteLine("Login Gagal");
             }
+            con.Close();
         }
+
+        private void Form2_form(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 frm = new Form2();
+            frm.ShowDialog();
+            this.Close();
+        }
+
     }
 }
